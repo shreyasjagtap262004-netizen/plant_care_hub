@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Profile - Plant Care Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">🌱 PlantCareHub</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="diagnosis.html">Diagnosis</a></li>
+                <li><a href="plant-profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="plant-profile">
+        <div class="profile-container">
+            <!-- Plant Header -->
+            <div class="plant-header">
+                <div class="plant-main-image">🌿</div>
+                <div class="plant-info">
+                    <h1 id="plantName">Monstera Deliciosa</h1>
+                    <div class="health-indicator" id="healthIndicator"></div>
+                    <p class="plant-species" id="plantSpecies">Tropical Aroid</p>
+                    <div class="plant-stats">
+                        <span id="daysSinceWatered">5 days since watered</span>
+                        <span id="growthStage">Growth Stage: Juvenile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="btn-primary" onclick="waterPlant()">
+                    💧 Water Now
+                </button>
+                <button class="btn-secondary" onclick="logFertilizer()">
+                    🌱 Fertilize
+                </button>
+                <button class="btn-secondary" onclick="showARPreview()">
+                    🕶️ AR Preview
+                </button>
+            </div>
+
+            <!-- Care Timeline -->
+            <section class="care-timeline">
+                <h2>📅 Care History</h2>
+                <div class="timeline" id="careTimeline">
+                    <!-- Dynamic content -->
+                </div>
+            </section>
+
+            <!-- Growth Chart -->
+            <section class="growth-chart">
+                <h2>📈 Growth Progress</h2>
+                <canvas id="growthChart" width="400" height="200"></canvas>
+            </section>
+
+            <!-- Care Notes -->
+            <section class="care-notes">
+                <h2>📝 Care Notes</h2>
+                <textarea id="plantNotes" placeholder="Add notes about your plant care..."></textarea>
+                <button class="btn-primary" onclick="saveNotes()">Save Notes</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/plant-profile.js"></script>
+</body>
+</html>

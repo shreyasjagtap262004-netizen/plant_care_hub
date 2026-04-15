@@ -1,0 +1,19 @@
+{
+  "name": "plant-care-hub",
+  "version": "1.0.0",
+  "description": "Interactive Plant Care Hub with AI diagnosis and MySQL",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "db:setup": "mysql -u root -p < database.sql"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

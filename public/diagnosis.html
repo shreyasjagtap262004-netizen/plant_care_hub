@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Diagnosis - Plant Care Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">🌱 PlantCareHub</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="diagnosis.html" class="active">Diagnosis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="diagnosis">
+        <div class="diagnosis-container">
+            <h1>🤖 AI Plant Health Diagnosis</h1>
+            <div class="upload-area" onclick="document.getElementById('plantImage').click()">
+                <input type="file" id="plantImage" accept="image/*" style="display: none;">
+                <div class="upload-icon">📷</div>
+                <p>Click to upload plant photo</p>
+                <small>AI will analyze health & suggest care</small>
+            </div>
+            <div id="diagnosisResult" class="result-hidden">
+                <div class="health-status" id="healthStatus"></div>
+                <div class="diagnosis-details">
+                    <h3>Diagnosis:</h3>
+                    <p id="diagnosisText"></p>
+                    <div class="care-tips">
+                        <h4>💡 Care Tips:</h4>
+                        <ul id="careTips"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/diagnosis.js"></script>
+</body>
+</html>
